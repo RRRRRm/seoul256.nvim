@@ -11,6 +11,7 @@ local function dimmer(color, level)
 end
 
 local function brighter(color, level)
+    level = level or 1
     return ct.change_brightness(color, CONTRAST_STEPS):to_hex()
 end
 
@@ -205,15 +206,15 @@ M.treesitter = {
 M.lsp = {
     LspCodeLens = {}, -- TODO
     LspDiagnosticsDefaultError = { fg = colors.error },
-    LspDiagnosticsDefaultHint = { fg = colors.purple },
+    LspDiagnosticsDefaultHint = { fg = colors.line_numbers },
     LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
     LspDiagnosticsDefaultWarning = { fg = colors.yellow },
     LspDiagnosticsFloatingError = { fg = colors.error },
-    LspDiagnosticsFloatingHint = { fg = colors.purple },
+    LspDiagnosticsFloatingHint = { fg = colors.line_numbers },
     LspDiagnosticsFloatingInformation = { fg = colors.paleblue },
     LspDiagnosticsFloatingWarning = { fg = colors.yellow },
     LspDiagnosticsSignError = { fg = colors.error },
-    LspDiagnosticsSignHint = { fg = colors.purple },
+    LspDiagnosticsSignHint = { fg = colors.line_numbers },
     LspDiagnosticsSignInformation = { fg = colors.paleblue },
     LspDiagnosticsSignWarning = { fg = colors.yellow },
     LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.error },
@@ -224,7 +225,7 @@ M.lsp = {
     },
     LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.yellow },
     LspDiagnosticsVirtualTextError = { fg = colors.error },
-    LspDiagnosticsVirtualTextHint = { fg = colors.purple },
+    LspDiagnosticsVirtualTextHint = { fg = colors.line_numbers },
     LspDiagnosticsVirtualTextInformation = { fg = colors.paleblue },
     LspDiagnosticsVirtualTextWarning = { fg = colors.yellow },
     LspReferenceRead = { fg = colors.accent, bg = colors.highlight },
@@ -305,7 +306,7 @@ M.plugins = {
         LspDiagnosticsError = { fg = colors.error },
         LspDiagnosticsWarning = { fg = colors.yellow },
         LspDiagnosticsInformation = { fg = colors.paleblue },
-        LspDiagnosticsHint = { fg = colors.purple },
+        LspDiagnosticsHint = { fg = colors.line_numbers },
     },
 
     WhichKey = {
@@ -321,7 +322,7 @@ M.plugins = {
         DiagnosticError = { fg = colors.error },
         DiagnosticWarning = { fg = colors.yellow },
         DiagnosticInformation = { fg = colors.paleblue },
-        DiagnosticHint = { fg = colors.purple },
+        DiagnosticHint = { fg = colors.line_numbers },
         DiagnosticTruncateLine = { fg = colors.fg },
         LspFloatWinNormal = { bg = colors.bg },
         LspFloatWinBorder = { fg = colors.purple },
