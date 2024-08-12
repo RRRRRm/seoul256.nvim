@@ -3,9 +3,9 @@ local colors = require("seoul256/colors")
 local M = {}
 
 M.normal = {
-    a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
+    a = { fg = colors.bg, bg = colors.red, gui = "bold" },
     b = { fg = colors.title, bg = colors.active },
-    c = { fg = colors.fg, bg = colors.selection },
+    c = { fg = colors.fg, bg = colors.bg_darker },
 }
 
 M.insert = {

@@ -100,6 +100,8 @@ M.editor = {
     },
     StatusLine = { fg = colors.fg, bg = colors.bg_alt },
     StatusLineNC = { fg = colors.text, bg = colors.disabled },
+    WinBar = { fg = colors.fg, bg = colors.bg_alt },
+    WinBarNC = { fg = colors.text, bg = colors.disabled },
     Substitute = {}, -- TODO
     TabLineFill = { fg = colors.fg },
     Tabline = { fg = colors.fg },
