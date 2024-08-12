@@ -1,5 +1,5 @@
 local M = {}
-local colors = require("seoul256/colors")
+local colors = require("seoul256.colors")
 
 function M.setup()
     vim.g.terminal_color_0 = colors.black

@@ -3,18 +3,6 @@ local ct = require("seoul256.colortools")
 
 local M = {}
 
-CONTRAST_STEPS = 10
-
-local function dimmer(color, level)
-    level = level or 1
-    return ct.change_brightness(color, -CONTRAST_STEPS):to_hex()
-end
-
-local function brighter(color, level)
-    level = level or 1
-    return ct.change_brightness(color, CONTRAST_STEPS):to_hex()
-end
-
 -- Syntax highlight groups
 -- Type `:h syntax` for more informations
 M.syntax = {
@@ -58,13 +46,13 @@ M.syntax = {
 -- Editor highlight groups
 -- Type `:h highlight-groups` for more informations
 M.editor = {
-    ColorColumn = { fg = colors.none, bg = colors.active },
+    ColorColumn = { fg = colors.none, bg = colors.bg_l },
     Conceal = { fg = colors.fg },
     Cursor = { fg = colors.cursor, bg = colors.none, style = "reverse" },
     lCursor = {}, -- TODO
-    CursorColumn = { fg = colors.none, bg = colors.active },
+    CursorColumn = { fg = colors.none, bg = colors.bg_l },
     CursorIM = { fg = colors.cursor, bg = colors.none, style = "reverse" },
-    CursorLine = { fg = colors.none, bg = colors.none },
+    CursorLine = { fg = colors.none, bg = colors.bg_l },
     CursorLineNr = { fg = colors.accent },
     DiffAdd = { fg = colors.green, bg = colors.none, style = "reverse" },
     DiffChange = { fg = colors.orange, bg = colors.none, style = "reverse" },
@@ -85,10 +73,10 @@ M.editor = {
     NonText = { fg = colors.fg },
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { fg = colors.fg, bg = colors.float },
-    NormalNC = {}, -- TODO
-    Pmenu = { fg = colors.text, bg = colors.contrast },
-    PmenuSbar = { fg = colors.text, bg = colors.contrast },
-    PmenuSel = { fg = colors.accent, bg = colors.active },
+    NormalNC = {}, -- TODO f
+    Pmenu = { fg = colors.fg, bg = colors.bg_l },
+    PmenuSbar = { fg = colors.text, bg = colors.bg_d },
+    PmenuSel = { fg = colors.fg, bg = colors.red },
     PmenuThumb = { fg = colors.fg, bg = colors.accent },
     Question = { fg = colors.green },
     QuickFixLine = {
@@ -111,9 +99,9 @@ M.editor = {
         bg = colors.none,
         style = "undercurl,italic",
     },
-    StatusLine = { fg = colors.fg, bg = colors.bg_alt },
+    StatusLine = { fg = colors.fg, bg = colors.bg_l },
     StatusLineNC = { fg = colors.text, bg = colors.fg },
-    WinBar = { fg = colors.fg, bg = dimmer(colors.bg) },
+    WinBar = { fg = colors.fg, bg = colors.bg_d },
     WinBarNC = { fg = colors.text, bg = colors.disabled },
     Substitute = {}, -- TODO
     TabLineFill = { fg = colors.fg },
@@ -206,15 +194,15 @@ M.treesitter = {
 M.lsp = {
     LspCodeLens = {}, -- TODO
     LspDiagnosticsDefaultError = { fg = colors.error },
-    LspDiagnosticsDefaultHint = { fg = colors.line_numbers },
+    LspDiagnosticsDefaultHint = { fg = colors.hint },
     LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
     LspDiagnosticsDefaultWarning = { fg = colors.yellow },
     LspDiagnosticsFloatingError = { fg = colors.error },
-    LspDiagnosticsFloatingHint = { fg = colors.line_numbers },
+    LspDiagnosticsFloatingHint = { fg = colors.hint },
     LspDiagnosticsFloatingInformation = { fg = colors.paleblue },
     LspDiagnosticsFloatingWarning = { fg = colors.yellow },
     LspDiagnosticsSignError = { fg = colors.error },
-    LspDiagnosticsSignHint = { fg = colors.line_numbers },
+    LspDiagnosticsSignHint = { fg = colors.hint },
     LspDiagnosticsSignInformation = { fg = colors.paleblue },
     LspDiagnosticsSignWarning = { fg = colors.yellow },
     LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.error },
@@ -225,7 +213,7 @@ M.lsp = {
     },
     LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.yellow },
     LspDiagnosticsVirtualTextError = { fg = colors.error },
-    LspDiagnosticsVirtualTextHint = { fg = colors.line_numbers },
+    LspDiagnosticsVirtualTextHint = { fg = colors.hint },
     LspDiagnosticsVirtualTextInformation = { fg = colors.paleblue },
     LspDiagnosticsVirtualTextWarning = { fg = colors.yellow },
     LspReferenceRead = { fg = colors.accent, bg = colors.highlight },
@@ -237,7 +225,7 @@ M.lsp = {
 M.plugins = {
     LspTrouble = {
         LspTroubleText = { fg = colors.text },
-        LspTroubleCount = { fg = colors.purple, bg = colors.active },
+        LspTroubleCount = { fg = colors.purple, bg = colors.bg_l },
         LspTroubleNormal = { fg = colors.fg, bg = colors.sidebar },
     },
     Diff = {
@@ -306,7 +294,7 @@ M.plugins = {
         LspDiagnosticsError = { fg = colors.error },
         LspDiagnosticsWarning = { fg = colors.yellow },
         LspDiagnosticsInformation = { fg = colors.paleblue },
-        LspDiagnosticsHint = { fg = colors.line_numbers },
+        LspDiagnosticsHint = { fg = colors.hint },
     },
 
     WhichKey = {
@@ -322,7 +310,7 @@ M.plugins = {
         DiagnosticError = { fg = colors.error },
         DiagnosticWarning = { fg = colors.yellow },
         DiagnosticInformation = { fg = colors.paleblue },
-        DiagnosticHint = { fg = colors.line_numbers },
+        DiagnosticHint = { fg = colors.hint },
         DiagnosticTruncateLine = { fg = colors.fg },
         LspFloatWinNormal = { bg = colors.bg },
         LspFloatWinBorder = { fg = colors.purple },
@@ -344,7 +332,7 @@ M.plugins = {
 
     BufferLine = {
         BufferLineIndicatorSelected = { fg = colors.accent },
-        BufferLineFill = { bg = colors.bg_alt },
+        BufferLineFill = { bg = colors.bg_l },
     },
 
     Sneak = {
@@ -450,8 +438,8 @@ if vim.g.seoul256_borders == true then
     M.editor.VertSplit = { fg = colors.border }
 end
 
-if vim.g.seoul256_hl_current_line == true then
-    M.editor.CursorLine = { fg = colors.none, bg = colors.active }
+if vim.g.seoul256_hl_current_line == false then
+    M.editor.CursorLine = { fg = colors.none, bg = colors.none }
 end
 
 if vim.g.seoul256_italic_string == false then

@@ -5,28 +5,28 @@ local M = {}
 
 M.normal = {
     a = { fg = colors.bg, bg = colors.red, gui = "bold" },
-    b = { fg = colors.title, bg = colors.active },
-    c = { fg = colors.fg, bg = ct.change_brightness(colors.bg, -10):to_hex() },
+    b = { fg = colors.title, bg = colors.bg_l },
+    c = { fg = colors.fg, bg = colors.bg_d },
 }
 
 M.insert = {
     a = { fg = colors.bg, bg = colors.green, gui = "bold" },
-    b = { fg = colors.title, bg = colors.active },
+    b = { fg = colors.title, bg = colors.bg_l },
 }
 
 M.visual = {
     a = { fg = colors.bg, bg = colors.purple, gui = "bold" },
-    b = { fg = colors.title, bg = colors.active },
+    b = { fg = colors.title, bg = colors.bg_l },
 }
 
 M.replace = {
     a = { fg = colors.bg, bg = colors.red, gui = "bold" },
-    b = { fg = colors.title, bg = colors.active },
+    b = { fg = colors.title, bg = colors.bg_l },
 }
 
 M.command = {
     a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
-    b = { fg = colors.title, bg = colors.active },
+    b = { fg = colors.title, bg = colors.bg_l },
 }
 
 M.inactive = {

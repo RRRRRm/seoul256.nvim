@@ -210,7 +210,7 @@ end
 -- @param opt.ratio The ratio for mixing the two colors (optional, default is 0.5)
 -- @param opt.ret The return type, "rgb" or "hex" (optional, default is "rgb")
 -- @return The mixed color in the format specified by opt.ret
-function M.mix_colors_via_rgb(color1, color2, ratio)
+function M.mix_two_colors_via_rgb(color1, color2, ratio)
     color1 = M.any_to_rgb(color1) -- Convert the first color to RGB format
     color2 = M.any_to_rgb(color2) -- Convert the second color to RGB format
     if not color1 or not color2 then
@@ -301,9 +301,9 @@ end
 -- Mix two LAB
 local function mix_lab(lab1, lab2, t)
     return {
-        l = lab1.l * (1 - t) + lab2.l * t,
-        a = lab1.a * (1 - t) + lab2.a * t,
-        b = lab1.b * (1 - t) + lab2.b * t,
+        l = lab2.l * (1 - t) + lab1.l * t,
+        a = lab2.a * (1 - t) + lab1.a * t,
+        b = lab2.b * (1 - t) + lab1.b * t,
     }
 end
 
@@ -335,6 +335,13 @@ function M.change_saturation_via_lab(color, factor)
     lab.a = lab.a + factor
     lab.b = lab.b + factor
     return lab_to_rgb(lab)
+end
+
+CONTRAST_FACTOR = vim.g.seoul256_contrast_factor or 1
+
+function M.lighten(hex, value)
+    value = value or 1
+    return M.change_brightness(hex, CONTRAST_FACTOR * value):to_hex()
 end
 
 return M
