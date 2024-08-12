@@ -92,7 +92,7 @@ require('lualine').setup {
 | seoul256_contrast           | `true`  | Make sidebars and popup menus like nvim-tree and telescope have a different background  |
 | seoul256_borders            | `false` | Enable the border between verticaly split windows visable                               |
 | seoul256_disable_background | `false` | Disable the setting of background color so that NeoVim can use your terminal background |
-| seoul256_hl_current_line    | `false` | Enable highlighting for the current line                                                |
+| seoul256_hl_current_line    | `true`  | Enable highlighting for the current line                                                |
 
 ```lua
 -- Example config in lua
