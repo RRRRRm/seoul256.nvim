@@ -197,7 +197,7 @@ M.treesitter = {
     TSUnderline = { fg = colors.fg, bg = colors.none, style = "underline" },
     TSVariable = { fg = colors.gray },
     TSVariableBuiltin = { fg = colors.gray },
-    TSWarning = {}, -- TODO
+    TSWarning = { fg = colors.yellow },
 }
 
 -- Lsp highlight groups
