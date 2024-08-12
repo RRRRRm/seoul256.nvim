@@ -5,7 +5,7 @@ local M = {}
 M.normal = {
     a = { fg = colors.bg, bg = colors.red, gui = "bold" },
     b = { fg = colors.title, bg = colors.active },
-    c = { fg = colors.fg, bg = colors.bg_darker },
+    c = { fg = colors.fg, bg = colors.bg_dimmer },
 }
 
 M.insert = {
