@@ -453,4 +453,8 @@ if vim.g.seoul256_hl_current_line == true then
     M.editor.CursorLine = { fg = colors.none, bg = colors.active }
 end
 
+if vim.g.seoul256_italic_string == false then
+    M.syntax.String = { fg = colors.string, bg = colors.none }
+end
+
 return M
