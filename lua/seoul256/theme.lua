@@ -1,6 +1,18 @@
-local colors = require("seoul256/colors")
+local colors = require("seoul256.colors")
+local ct = require("seoul256.colortools")
 
 local M = {}
+
+CONTRAST_STEPS = 10
+
+local function dimmer(color, level)
+    level = level or 1
+    return ct.change_brightness(color, -CONTRAST_STEPS):to_hex()
+end
+
+local function brighter(color, level)
+    return ct.change_brightness(color, CONTRAST_STEPS):to_hex()
+end
 
 -- Syntax highlight groups
 -- Type `:h syntax` for more informations
@@ -100,7 +112,7 @@ M.editor = {
     },
     StatusLine = { fg = colors.fg, bg = colors.bg_alt },
     StatusLineNC = { fg = colors.text, bg = colors.disabled },
-    WinBar = { fg = colors.fg, bg = colors.bg_alt },
+    WinBar = { fg = colors.fg, bg = dimmer(colors.bg) },
     WinBarNC = { fg = colors.text, bg = colors.disabled },
     Substitute = {}, -- TODO
     TabLineFill = { fg = colors.fg },

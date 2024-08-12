@@ -17,6 +17,9 @@ RGB.__type = "RGB"
 -- @param b The blue component (0-255).
 -- @return A new RGB object.
 function RGB:new(r, g, b)
+    if type(r) == "table" and r.r and r.g and r.b then
+        return RGB:new(r.r, r.g, r.b)
+    end
     local obj = {
         r = math.min(math.max(r, 0), 255),
         g = math.min(math.max(g, 0), 255),
@@ -26,6 +29,16 @@ function RGB:new(r, g, b)
     return obj
 end
 
+--- Converts the RGB color to a hexadecimal string.
+-- @return A string representing the color in hexadecimal format, e.g., "#ff0000".
+function RGB:to_hex()
+    return string.format("#%02x%02x%02x", self.r, self.g, self.b)
+end
+
+function RGB:__tostring()
+    return self:to_hex()
+end
+
 function RGB:__eq(other)
     return self.r == other.r and self.g == other.g and self.b == other.b
 end
@@ -33,12 +46,6 @@ end
 -- Method to determine whether it is an RGB object
 function RGB:is_rgb()
     return self.__type == "RGB"
-end
-
---- Converts the RGB color to a hexadecimal string.
--- @return A string representing the color in hexadecimal format, e.g., "#ff0000".
-function RGB:to_hex()
-    return string.format("#%02x%02x%02x", self.r, self.g, self.b)
 end
 
 --- Converts a hexadecimal color string to an RGB object.
@@ -314,18 +321,11 @@ function M.mix_two_colors_via_lab(color1, color2, t)
     return lab_to_rgb(mixed_lab)
 end
 
-function M.change_brightness_via_lab(color, amount)
+function M.change_brightness(color, amount)
     color = M.any_to_rgb(color)
-    local lab = rgb_to_lab(color)
-    lab.l = lab.l + amount
-    return lab_to_rgb(lab)
-end
-
-function M.change_brightness_via_rgb(color, amount)
     if not M.check_rgb(color) then
         return nil
     end
-    color = M.any_to_rgb(color)
     return RGB:new(color.r + amount, color.g + amount, color.b + amount)
 end
 
