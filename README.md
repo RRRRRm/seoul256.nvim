@@ -1,5 +1,8 @@
 # seoul256.nvim
 
+This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seoul256.nvim)
+, thanks to him for bringing this beautiful theme to nvim.
+
 ## 🎨 Based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim
 
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
