@@ -335,6 +335,12 @@ M.plugins = {
         BufferLineFill = { bg = colors.bg_l },
     },
 
+    Noise = {
+        NotifyERRORBorder = { fg = colors.red },
+        NotifyWARNBorder = { fg = colors.paleblue },
+        NotifyINFOBorder = { fg = colors.green },
+    },
+
     Sneak = {
         Sneak = { fg = colors.bg, bg = colors.accent },
         SneakScope = { bg = colors.selection },
