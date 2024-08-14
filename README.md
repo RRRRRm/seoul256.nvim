@@ -1,8 +1,5 @@
 # 🎨 seoul256.nvim
 
-This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seoul256.nvim)
- which is also based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim , thanks to them for bringing this beautiful theme to NeoVim.
-
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
 
 ## ✨ Features
@@ -142,3 +139,8 @@ Since I can't find a job and have nothing else to do now and I really really lik
 - [ ] Add option to adjust base brightness
 
 Also, I will continue to add plug-in support. If anyone has any ideas, please feel free to report issues.
+
+# 🙏 Thanks
+
+This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seoul256.nvim)
+ which is also based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim , thanks to them for bringing this beautiful theme to NeoVim.
