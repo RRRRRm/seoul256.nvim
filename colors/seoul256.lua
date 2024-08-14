@@ -6,6 +6,7 @@ package.loaded["seoul256"] = nil
 package.loaded["seoul256/util"] = nil
 package.loaded["seoul256/colors"] = nil
 package.loaded["seoul256/theme"] = nil
-package.loaded["seoul256/functions"] = nil
+package.loaded["seoul256/init"] = nil
+package.loaded["seoul256/colortools"] = nil
 
 require("seoul256")
