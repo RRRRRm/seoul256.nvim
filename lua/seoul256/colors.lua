@@ -1,26 +1,5 @@
 local ct = require("seoul256.colortools")
 local colors = {
-    --bg = "#3A3A3A",
-    --fg = "#dfe0e0",
-
-    --black = "#4e4e4e",
-    --red = "#D68787",
-    --green = "#5F865F",
-    --brown = "#c3a769",
-    --blue = "#85ADD4",
-    --purple = "#D7AFAF",
-    --cyan = "#87AFAF",
-    --light_gray = "#D0D0D0",
-
-    --gray = "#626262",
-    --light_red = "#D75F87",
-    --light_green = "#87AF87",
-    --yellow = "#FFD787",
-    --light_blue = "#ADD4FB",
-    --pink = "#FFAFAF",
-    --light_cyan = "#87D7D7",
-    --white = "#E4E4E4",
-
     bg = "#4c4c4c",
     fg = "#dfe0e0",
 
@@ -60,7 +39,6 @@ local colors = {
 }
 
 colors.hint = ct.change_saturation_via_lab(colors.line_numbers, 5):to_hex()
---colors.bg_l = "#545454",
 colors.bg_l = ct.lighten(colors.bg, 8)
 colors.bg_d = ct.lighten(colors.bg, -8)
 colors.selection = ct.mix_two_colors_via_lab(colors.highlight, colors.bg, 0.4):to_hex()
