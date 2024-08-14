@@ -1,10 +1,10 @@
-# shaunsingh/seoul256.nvim
+# seoul256.nvim
 
-## Based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim
+## 🎨 Based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim
 
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
 
-## Features
+## ✨ Features
 
 seoul256.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -29,6 +29,8 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
   - [Lualine](https://github.com/hoob3rt/lualine.nvim)
   - [Neogit](https://github.com/TimUntersberger/neogit)
   - [vim-sneak](https://github.com/justinmk/vim-sneak)
+  - [Noise.nvim]
+  - 
 
 - Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
@@ -38,21 +40,26 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 
 - Neovim >= 0.5.0
 
-## Installation
+## 📦 Installation
 
 Install via your favourite package manager:
 
+```lua
+-- If you are using lazy.nvim
+{"RRRRRm/seoul256.nvim"}
+```
+
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/seoul256.nvim'
+Plug 'RRRRRm/seoul256.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/seoul256.nvim'
+use 'RRRRRm/seoul256.nvim'
 ```
 
-## Usage
+## 🚀 Usage
 
 Enable the colorscheme:
 
@@ -124,9 +131,9 @@ let g:seoul256_hl_current_line = v:true
 colorscheme seoul256
 ```
 
-# Roadmap
+# 🗺️ Roadmap
 
-Since I can't find a job and have nothing else to do now, I will actively maintain this branch.
+Since I can't find a job and have nothing else to do now and I really really like this theme, I will actively maintain this branch.
 
 - [ ] Support light theme
 - [ ] Dynamically generate accent colors that just simply darker or lighter
