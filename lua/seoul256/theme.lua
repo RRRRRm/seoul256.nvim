@@ -65,7 +65,7 @@ M.editor = {
     Folded = { fg = colors.green, bg = colors.bg, style = "italic" },
     IncSearch = { fg = colors.highlight, bg = colors.white, style = "reverse" },
     LineNr = { fg = colors.line_numbers },
-    MatchParen = { fg = colors.yellow, bg = colors.bg_l, style = "bold" },
+    MatchParen = { fg = colors.yellow, bg = ct.lighten(colors.bg, 32), style = "bold" },
     ModeMsg = { fg = colors.accent },
     MoreMsg = { fg = colors.accent },
     MsgArea = {}, -- TODO
