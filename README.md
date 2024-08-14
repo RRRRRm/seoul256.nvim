@@ -137,5 +137,8 @@ Since I can't find a job and have nothing else to do now and I really really lik
 
 - [ ] Support light theme
 - [ ] Dynamically generate accent colors that just simply darker or lighter
+- [ ] Find a way to change options in running
 - [ ] Add option to adjust contrast
 - [ ] Add option to adjust base brightness
+
+Also, I will continue to add plug-in support. If anyone has any ideas, please feel free to report issues.
