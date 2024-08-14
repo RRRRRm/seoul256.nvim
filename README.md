@@ -128,7 +128,7 @@ let g:seoul256_hl_current_line = v:true
 colorscheme seoul256
 ```
 
-# 🗺️ Roadmap
+## 🗺️ Roadmap
 
 Since I can't find a job and have nothing else to do now and I really really like this theme, I will actively maintain this branch.
 
@@ -141,7 +141,7 @@ Since I can't find a job and have nothing else to do now and I really really lik
 
 Also, I will continue to add plug-in support. If anyone has any ideas, please feel free to report issues.
 
-# 🙏 Thanks
+## 🙏 Thanks
 
 This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seoul256.nvim)
  which is also based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim , thanks to them for bringing this beautiful theme to NeoVim.
