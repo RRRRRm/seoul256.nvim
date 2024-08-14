@@ -7,7 +7,7 @@ This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seo
 
 ## ✨ Features
 
-seoul256.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+seoul256.nvim is meant to be a modern low-contrast colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 - Supported plugins:
