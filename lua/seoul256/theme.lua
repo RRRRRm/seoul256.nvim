@@ -6,39 +6,39 @@ local M = {}
 -- Syntax highlight groups
 -- Type `:h syntax` for more informations
 M.syntax = {
-    Boolean = { fg = colors.orange },
-    Character = { fg = colors.orange },
+    Boolean = { fg = colors.light_cyan },
+    Character = { fg = colors.light_cyan },
     Comment = { fg = colors.green },
-    Conditional = { fg = colors.purple },
-    Constant = { fg = colors.yellow },
+    Conditional = { fg = colors.light_red },
+    Constant = { fg = colors.brown },
     Debug = { fg = colors.red },
-    Define = { fg = colors.pink },
+    Define = { fg = colors.purple },
     Delimiter = { fg = colors.cyan },
     Error = { fg = colors.error, bg = colors.none, style = "underline,bold" },
     Exception = { fg = colors.cyan },
-    Float = { fg = colors.orange },
-    Function = { fg = colors.blue },
-    Identifier = { fg = colors.pink },
+    Float = { fg = colors.light_cyan },
+    Function = { fg = colors.cyan },
+    Identifier = { fg = colors.purple },
     Ignore = { fg = colors.fg },
-    Include = { fg = colors.blue },
-    Keyword = { fg = colors.purple },
-    Label = { fg = colors.purple },
+    Include = { fg = colors.cyan },
+    Keyword = { fg = colors.light_red },
+    Label = { fg = colors.light_red },
     Macro = { fg = colors.cyan },
-    Number = { fg = colors.orange },
+    Number = { fg = colors.light_cyan },
     Operator = { fg = colors.cyan },
     PreCondit = { fg = colors.cyan },
-    PreProc = { fg = colors.purple },
-    Repeat = { fg = colors.purple },
+    PreProc = { fg = colors.light_red },
+    Repeat = { fg = colors.light_red },
     Special = { fg = colors.red },
-    SpecialChar = { fg = colors.pink },
-    SpecialComment = { fg = colors.gray },
-    Statement = { fg = colors.pink },
+    SpecialChar = { fg = colors.purple },
+    SpecialComment = { fg = colors.white },
+    Statement = { fg = colors.purple },
     StorageClass = { fg = colors.cyan },
     String = { fg = colors.string, bg = colors.none, style = "italic" },
     Structure = { fg = colors.puple },
     Tag = { fg = colors.red },
-    Todo = { fg = colors.yellow, bg = colors.none, style = "bold,italic" },
-    Type = { fg = colors.purple },
+    Todo = { fg = colors.brown, bg = colors.none, style = "bold,italic" },
+    Type = { fg = colors.light_red },
     Typedef = { fg = colors.red },
     Underlined = { fg = colors.link, bg = colors.none, style = "underline" },
 }
@@ -55,17 +55,17 @@ M.editor = {
     CursorLine = { fg = colors.none, bg = colors.bg_l },
     CursorLineNr = { fg = colors.accent },
     DiffAdd = { fg = colors.green, bg = colors.none, style = "reverse" },
-    DiffChange = { fg = colors.orange, bg = colors.none, style = "reverse" },
+    DiffChange = { fg = colors.light_cyan, bg = colors.none, style = "reverse" },
     DiffDelete = { fg = colors.red, bg = colors.none, style = "reverse" },
-    DiffText = { fg = colors.yellow, bg = colors.none, style = "reverse" },
-    Directory = { fg = colors.blue, bg = colors.none },
+    DiffText = { fg = colors.brown, bg = colors.none, style = "reverse" },
+    Directory = { fg = colors.cyan, bg = colors.none },
     EndOfBuffer = { fg = colors.fg },
     ErrorMsg = { fg = colors.none },
-    FoldColumn = { fg = colors.blue },
+    FoldColumn = { fg = colors.cyan },
     Folded = { fg = colors.green, bg = colors.bg, style = "italic" },
     IncSearch = { fg = colors.highlight, bg = colors.white, style = "reverse" },
     LineNr = { fg = colors.line_numbers },
-    MatchParen = { fg = colors.yellow, bg = ct.lighten(colors.bg, 32), style = "bold" },
+    MatchParen = { fg = colors.brown, bg = ct.lighten(colors.bg, 32), style = "bold" },
     ModeMsg = { fg = colors.accent },
     MoreMsg = { fg = colors.accent },
     MsgArea = {}, -- TODO
@@ -86,16 +86,16 @@ M.editor = {
     },
     Search = { fg = colors.highlight, bg = colors.white, style = "reverse" },
     SignColumn = { fg = colors.fg, bg = colors.bg },
-    SpecialKey = { fg = colors.purple },
+    SpecialKey = { fg = colors.light_red },
     SpellBad = { fg = colors.red, bg = colors.none, style = "undercurl,italic" },
-    SpellCap = { fg = colors.blue, bg = colors.none, style = "undercurl,italic" },
+    SpellCap = { fg = colors.cyan, bg = colors.none, style = "undercurl,italic" },
     SpellLocal = {
         fg = colors.cyan,
         bg = colors.none,
         style = "undercurl,italic",
     },
     SpellRare = {
-        fg = colors.purple,
+        fg = colors.light_red,
         bg = colors.none,
         style = "undercurl,italic",
     },
@@ -113,9 +113,9 @@ M.editor = {
     VertSplit = { fg = colors.bg },
     Visual = { fg = colors.none, bg = colors.selection },
     VisualNOS = { fg = colors.none, bg = colors.selection },
-    WarningMsg = { fg = colors.yellow },
+    WarningMsg = { fg = colors.brown },
     Whitespace = { fg = colors.text },
-    WildMenu = { fg = colors.orange, bg = colors.none, style = "bold" },
+    WildMenu = { fg = colors.light_cyan, bg = colors.none, style = "bold" },
 
     -- GUI only
     Menu = {},
@@ -126,67 +126,67 @@ M.editor = {
 -- TreeSitter highlight groups
 -- Type `:h nvim-treesitter-highlights` for more informations
 M.treesitter = {
-    TSAttribute = { fg = colors.yellow },
-    TSBoolean = { fg = colors.orange },
-    TSCharacter = { fg = colors.orange },
+    TSAttribute = { fg = colors.brown },
+    TSBoolean = { fg = colors.light_cyan },
+    TSCharacter = { fg = colors.light_cyan },
     TSComment = { fg = colors.green },
-    TSConditional = { fg = colors.purple },
-    TSConstBuiltin = { fg = colors.blue },
-    TSConstMacro = { fg = colors.blue },
-    TSConstant = { fg = colors.yellow },
-    TSConstructor = { fg = colors.purple },
+    TSConditional = { fg = colors.light_red },
+    TSConstBuiltin = { fg = colors.cyan },
+    TSConstMacro = { fg = colors.cyan },
+    TSConstant = { fg = colors.brown },
+    TSConstructor = { fg = colors.light_red },
     TSDanger = {}, -- TODO
-    TSEmphasis = { fg = colors.paleblue },
+    TSEmphasis = { fg = colors.orange },
     TSEnvironment = {}, -- TODO
     TSEnvironmentName = {}, -- TODO
     TSError = { fg = colors.error },
-    TSException = { fg = colors.yellow },
-    TSField = { fg = colors.gray },
+    TSException = { fg = colors.brown },
+    TSField = { fg = colors.white },
     TSFloat = { fg = colors.red },
     TSFuncBuiltin = { fg = colors.cyan },
-    TSFuncMacro = { fg = colors.blue },
-    TSFunction = { fg = colors.blue },
+    TSFuncMacro = { fg = colors.cyan },
+    TSFunction = { fg = colors.cyan },
     TSInclude = { fg = colors.cyan },
-    TSKeyword = { fg = colors.purple },
-    TSKeywordFunction = { fg = colors.purple },
+    TSKeyword = { fg = colors.light_red },
+    TSKeywordFunction = { fg = colors.light_red },
     TSKeywordOperator = {}, -- TODO
     TSKeywordReturn = {}, -- TODO
     TSLabel = { fg = colors.red },
     TSLiteral = { fg = colors.fg },
     TSMath = {}, -- TODO
-    TSMethod = { fg = colors.blue },
-    TSNamespace = { fg = colors.yellow },
+    TSMethod = { fg = colors.cyan },
+    TSNamespace = { fg = colors.brown },
     TSNone = {}, -- TODO
     TSNote = {}, -- TODO
-    TSNumber = { fg = colors.orange },
+    TSNumber = { fg = colors.light_cyan },
     TSOperator = { fg = colors.cyan },
-    TSParameter = { fg = colors.paleblue },
-    TSParameterReference = { fg = colors.paleblue },
-    TSProperty = { fg = colors.paleblue },
+    TSParameter = { fg = colors.orange },
+    TSParameterReference = { fg = colors.orange },
+    TSProperty = { fg = colors.orange },
     TSPunctBracket = { fg = colors.cyan },
     TSPunctDelimiter = { fg = colors.cyan },
     TSPunctSpecial = { fg = colors.cyan },
-    TSRepeat = { fg = colors.purple },
+    TSRepeat = { fg = colors.light_red },
     TSStrike = {}, -- TODO
     TSString = { fg = colors.string },
     TSStringEscape = { fg = colors.fg },
-    TSStringRegex = { fg = colors.blue },
+    TSStringRegex = { fg = colors.cyan },
     TSStringSpecial = {}, -- TODO
     TSStrong = {}, -- TODO
-    TSSymbol = { fg = colors.yellow },
+    TSSymbol = { fg = colors.brown },
     TSTag = { fg = colors.red },
     TSTagAttribute = {}, -- TODO
-    TSTagDelimiter = { fg = colors.yellow },
+    TSTagDelimiter = { fg = colors.brown },
     TSText = { fg = colors.text },
-    TSTextReference = { fg = colors.yellow }, -- FIXME ???
-    TSTitle = { fg = colors.paleblue, bg = colors.none, style = "bold" },
-    TSType = { fg = colors.purple },
-    TSTypeBuiltin = { fg = colors.purple },
+    TSTextReference = { fg = colors.brown }, -- FIXME ???
+    TSTitle = { fg = colors.orange, bg = colors.none, style = "bold" },
+    TSType = { fg = colors.light_red },
+    TSTypeBuiltin = { fg = colors.light_red },
     TSURI = { fg = colors.link },
     TSUnderline = { fg = colors.fg, bg = colors.none, style = "underline" },
-    TSVariable = { fg = colors.gray },
-    TSVariableBuiltin = { fg = colors.gray },
-    TSWarning = { fg = colors.yellow },
+    TSVariable = { fg = colors.white },
+    TSVariableBuiltin = { fg = colors.white },
+    TSWarning = { fg = colors.brown },
 }
 
 -- Lsp highlight groups
@@ -195,27 +195,27 @@ M.lsp = {
     LspCodeLens = {}, -- TODO
     LspDiagnosticsDefaultError = { fg = colors.error },
     LspDiagnosticsDefaultHint = { fg = colors.hint },
-    LspDiagnosticsDefaultInformation = { fg = colors.paleblue },
-    LspDiagnosticsDefaultWarning = { fg = colors.yellow },
+    LspDiagnosticsDefaultInformation = { fg = colors.orange },
+    LspDiagnosticsDefaultWarning = { fg = colors.brown },
     LspDiagnosticsFloatingError = { fg = colors.error },
     LspDiagnosticsFloatingHint = { fg = colors.hint },
-    LspDiagnosticsFloatingInformation = { fg = colors.paleblue },
-    LspDiagnosticsFloatingWarning = { fg = colors.yellow },
+    LspDiagnosticsFloatingInformation = { fg = colors.orange },
+    LspDiagnosticsFloatingWarning = { fg = colors.brown },
     LspDiagnosticsSignError = { fg = colors.error },
     LspDiagnosticsSignHint = { fg = colors.hint },
-    LspDiagnosticsSignInformation = { fg = colors.paleblue },
-    LspDiagnosticsSignWarning = { fg = colors.yellow },
+    LspDiagnosticsSignInformation = { fg = colors.orange },
+    LspDiagnosticsSignWarning = { fg = colors.brown },
     LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.error },
-    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.paleblue },
+    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = colors.orange },
     LspDiagnosticsUnderlineInformation = {
         style = "undercurl",
-        sp = colors.paleblue,
+        sp = colors.orange,
     },
-    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.yellow },
+    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = colors.brown },
     LspDiagnosticsVirtualTextError = { fg = colors.error },
     LspDiagnosticsVirtualTextHint = { fg = colors.hint },
-    LspDiagnosticsVirtualTextInformation = { fg = colors.paleblue },
-    LspDiagnosticsVirtualTextWarning = { fg = colors.yellow },
+    LspDiagnosticsVirtualTextInformation = { fg = colors.orange },
+    LspDiagnosticsVirtualTextWarning = { fg = colors.brown },
     LspReferenceRead = { fg = colors.accent, bg = colors.highlight },
     LspReferenceText = { fg = colors.accent, bg = colors.highlight },
     LspReferenceWrite = { fg = colors.accent, bg = colors.highlight },
@@ -225,25 +225,25 @@ M.lsp = {
 M.plugins = {
     LspTrouble = {
         LspTroubleText = { fg = colors.text },
-        LspTroubleCount = { fg = colors.purple, bg = colors.bg_l },
+        LspTroubleCount = { fg = colors.light_red, bg = colors.bg_l },
         LspTroubleNormal = { fg = colors.fg, bg = colors.sidebar },
     },
     Diff = {
         diffAdded = { fg = colors.green },
         diffRemoved = { fg = colors.red },
-        diffChanged = { fg = colors.yellow },
-        diffOldFile = { fg = colors.yellow },
-        diffNewFile = { fg = colors.orange },
-        diffFile = { fg = colors.blue },
+        diffChanged = { fg = colors.brown },
+        diffOldFile = { fg = colors.brown },
+        diffNewFile = { fg = colors.light_cyan },
+        diffFile = { fg = colors.cyan },
         diffLine = { fg = colors.green },
-        diffIndexLine = { fg = colors.purple },
+        diffIndexLine = { fg = colors.light_red },
     },
 
     Neogit = {
-        NeogitBranch = { fg = colors.paleblue },
-        NeogitRemote = { fg = colors.purple },
+        NeogitBranch = { fg = colors.orange },
+        NeogitRemote = { fg = colors.light_red },
         NeogitHunkHeader = { fg = colors.fg, bg = colors.highlight },
-        NeogitHunkHeaderHighlight = { fg = colors.blue, bg = colors.contrast },
+        NeogitHunkHeaderHighlight = { fg = colors.cyan, bg = colors.contrast },
         NeogitDiffContextHighlight = { fg = colors.text, bg = colors.contrast },
         NeogitDiffDeleteHighlight = { fg = colors.red },
         NeogitDiffAddHighlight = { fg = colors.green },
@@ -251,7 +251,7 @@ M.plugins = {
 
     GitGutter = {
         GitGutterAdd = { fg = colors.green },
-        GitGutterChange = { fg = colors.yellow },
+        GitGutterChange = { fg = colors.brown },
         GitGutterDelete = { fg = colors.red },
     },
 
@@ -259,9 +259,9 @@ M.plugins = {
         GitSignsAdd = { fg = colors.green },
         GitSignsAddNr = { fg = colors.green },
         GitSignsAddLn = { fg = colors.green },
-        GitSignsChange = { fg = colors.yellow },
-        GitSignsChangeNr = { fg = colors.yellow },
-        GitSignsChangeLn = { fg = colors.yellow },
+        GitSignsChange = { fg = colors.brown },
+        GitSignsChangeNr = { fg = colors.brown },
+        GitSignsChangeLn = { fg = colors.brown },
         GitSignsDelete = { fg = colors.red },
         GitSignsDeleteNr = { fg = colors.red },
         GitSignsDeleteLn = { fg = colors.red },
@@ -269,38 +269,38 @@ M.plugins = {
 
     Telescope = {
         TelescopePromptBorder = { fg = colors.cyan },
-        TelescopeResultsBorder = { fg = colors.purple },
+        TelescopeResultsBorder = { fg = colors.light_red },
         TelescopePreviewBorder = { fg = colors.green },
-        TelescopeSelectionCaret = { fg = colors.purple },
-        TelescopeSelection = { fg = colors.purple },
+        TelescopeSelectionCaret = { fg = colors.light_red },
+        TelescopeSelection = { fg = colors.light_red },
         TelescopeMatching = { fg = colors.cyan },
         TelescopeNormal = { fg = colors.fg, bg = colors.float },
     },
 
     NvimTree = {
         NvimTreeNormal = { fg = colors.fg, bg = colors.sidebar },
-        NvimTreeRootFolder = { fg = colors.blue, style = "bold" },
-        NvimTreeGitDirty = { fg = colors.yellow },
+        NvimTreeRootFolder = { fg = colors.cyan, style = "bold" },
+        NvimTreeGitDirty = { fg = colors.brown },
         NvimTreeGitNew = { fg = colors.green },
-        NvimTreeImageFile = { fg = colors.yellow },
+        NvimTreeImageFile = { fg = colors.brown },
         NvimTreeExecFile = { fg = colors.green },
-        NvimTreeSpecialFile = { fg = colors.purple, style = "underline" },
-        NvimTreeFolderName = { fg = colors.paleblue },
+        NvimTreeSpecialFile = { fg = colors.light_red, style = "underline" },
+        NvimTreeFolderName = { fg = colors.orange },
         NvimTreeEmptyFolderName = { fg = colors.fg },
         NvimTreeFolderIcon = { fg = colors.accent },
         NvimTreeIndentMarker = { fg = colors.fg },
 
         -- TODO not sure this goes here
         LspDiagnosticsError = { fg = colors.error },
-        LspDiagnosticsWarning = { fg = colors.yellow },
-        LspDiagnosticsInformation = { fg = colors.paleblue },
+        LspDiagnosticsWarning = { fg = colors.brown },
+        LspDiagnosticsInformation = { fg = colors.orange },
         LspDiagnosticsHint = { fg = colors.hint },
     },
 
     WhichKey = {
         WhichKey = { fg = colors.accent, style = "bold" },
         WhichKeyGroup = { fg = colors.text },
-        WhichKeyDesc = { fg = colors.blue, style = "italic" },
+        WhichKeyDesc = { fg = colors.cyan, style = "italic" },
         WhichKeySeperator = { fg = colors.fg },
         WhichKeyFloating = { bg = colors.float },
         WhichKeyFloat = { bg = colors.float },
@@ -308,25 +308,25 @@ M.plugins = {
 
     LspSaga = {
         DiagnosticError = { fg = colors.error },
-        DiagnosticWarning = { fg = colors.yellow },
-        DiagnosticInformation = { fg = colors.paleblue },
+        DiagnosticWarning = { fg = colors.brown },
+        DiagnosticInformation = { fg = colors.orange },
         DiagnosticHint = { fg = colors.hint },
         DiagnosticTruncateLine = { fg = colors.fg },
         LspFloatWinNormal = { bg = colors.bg },
-        LspFloatWinBorder = { fg = colors.purple },
+        LspFloatWinBorder = { fg = colors.light_red },
         LspSagaBorderTitle = { fg = colors.cyan },
-        LspSagaHoverBorder = { fg = colors.paleblue },
+        LspSagaHoverBorder = { fg = colors.orange },
         LspSagaRenameBorder = { fg = colors.green },
         LspSagaDefPreviewBorder = { fg = colors.green },
-        LspSagaCodeActionBorder = { fg = colors.blue },
+        LspSagaCodeActionBorder = { fg = colors.cyan },
         LspSagaFinderSelection = { fg = colors.green },
-        LspSagaCodeActionTitle = { fg = colors.paleblue },
-        LspSagaCodeActionContent = { fg = colors.purple },
-        LspSagaSignatureHelpBorder = { fg = colors.pink },
-        ReferencesCount = { fg = colors.purple },
-        DefinitionCount = { fg = colors.purple },
-        DefinitionIcon = { fg = colors.blue },
-        ReferencesIcon = { fg = colors.blue },
+        LspSagaCodeActionTitle = { fg = colors.orange },
+        LspSagaCodeActionContent = { fg = colors.light_red },
+        LspSagaSignatureHelpBorder = { fg = colors.purple },
+        ReferencesCount = { fg = colors.light_red },
+        DefinitionCount = { fg = colors.light_red },
+        DefinitionIcon = { fg = colors.cyan },
+        ReferencesIcon = { fg = colors.cyan },
         TargetWord = { fg = colors.cyan },
     },
 
@@ -337,7 +337,7 @@ M.plugins = {
 
     Noise = {
         NotifyERRORBorder = { fg = colors.red },
-        NotifyWARNBorder = { fg = colors.paleblue },
+        NotifyWARNBorder = { fg = colors.orange },
         NotifyINFOBorder = { fg = colors.green },
     },
 
@@ -362,21 +362,21 @@ M.plugins = {
         DashboardCenter = { fg = colors.cyan },
         DashboardFooter = { fg = colors.green, style = "italic" },
         DashboardHeader = { fg = colors.red },
-        DashboardShortCut = { fg = colors.blue },
+        DashboardShortCut = { fg = colors.cyan },
     },
 
     NvimDapUi = {
         DapUINormal = { M.editor.Normal },
         DapUIVariable = { M.editor.Normal },
         DapUIScope = { guifg = colors.cyan },
-        DapUIType = { guifg = colors.pink },
+        DapUIType = { guifg = colors.purple },
         DapUIValue = { M.editor.Normal },
         DapUIModifiedValue = { guifg = colors.cyan, style = "bold" },
         DapUIDecoration = { guifg = colors.cyan },
         DapUIThread = { guifg = colors.green },
         DapUIStoppedThread = { guifg = colors.cyan },
         DapUIFrameName = { M.editor.Normal },
-        DapUISource = { guifg = colors.pink },
+        DapUISource = { guifg = colors.purple },
         DapUILineNumber = { guifg = colors.cyan },
         DapUIFloatNormal = { M.editor.NormalFloat },
         DapUIFloatBorder = { guifg = colors.cyan },
@@ -387,7 +387,7 @@ M.plugins = {
         DapUIBreakpointsInfo = { guifg = colors.green },
         DapUIBreakpointsCurrentLine = { guifg = colors.green, style = "bold" },
         DapUIBreakpointsLine = { M.editor.DapUILineNumber },
-        DapUIBreakpointsDisabledLine = { guifg = colors.gray },
+        DapUIBreakpointsDisabledLine = { guifg = colors.white },
         DapUICurrentFrameName = { guifg = colors.green, style = "bold" },
         DapUIStepOver = { guifg = colors.cyan },
         DapUIStepInto = { guifg = colors.cyan },
@@ -396,7 +396,7 @@ M.plugins = {
         DapUIStop = { guifg = #colors.red },
         DapUIPlayPause = { guifg = colors.green },
         DapUIRestart = { guifg = colors.green },
-        DapUIUnavailable = { guifg = colors.gray },
+        DapUIUnavailable = { guifg = colors.white },
         DapUIWinSelect = { ctermfg = colors.cyan, guifg = colors.cyan, style = "bold" },
         DapUIEndofBuffer = { M.editor.EndofBuffer },
     },
@@ -418,26 +418,26 @@ if vim.g.seoul256_italic_comments == true then
 end
 
 if vim.g.seoul256_italic_keywords == true then
-    M.syntax.Conditional = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.syntax.Keyword = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.syntax.Repeat = { fg = colors.purple, bg = colors.none, style = "italic" }
-    M.treesitter.TSConditional = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSKeyword = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSRepeat = { fg = colors.purple, style = "italic" }
-    M.treesitter.TSKeywordFunction = { fg = colors.purple, style = "italic" }
+    M.syntax.Conditional = { fg = colors.light_red, bg = colors.none, style = "italic" }
+    M.syntax.Keyword = { fg = colors.light_red, bg = colors.none, style = "italic" }
+    M.syntax.Repeat = { fg = colors.light_red, bg = colors.none, style = "italic" }
+    M.treesitter.TSConditional = { fg = colors.light_red, style = "italic" }
+    M.treesitter.TSKeyword = { fg = colors.light_red, style = "italic" }
+    M.treesitter.TSRepeat = { fg = colors.light_red, style = "italic" }
+    M.treesitter.TSKeywordFunction = { fg = colors.light_red, style = "italic" }
 end
 
 if vim.g.seoul256_italic_functions == true then
-    M.syntax.Function = { fg = colors.blue, bg = colors.none, style = "italic" }
-    M.treesitter.TSFunction = { fg = colors.blue, style = "italic" }
-    M.treesitter.TSMethod = { fg = colors.blue, style = "italic" }
+    M.syntax.Function = { fg = colors.cyan, bg = colors.none, style = "italic" }
+    M.treesitter.TSFunction = { fg = colors.cyan, style = "italic" }
+    M.treesitter.TSMethod = { fg = colors.cyan, style = "italic" }
     M.treesitter.TSFuncBuiltin = { fg = colors.cyan, style = "italic" }
 end
 
 if vim.g.seoul256_italic_variables == true then
-    M.syntax.Identifier = { fg = colors.pink, bg = colors.none, style = "italic" }
-    M.treesitter.TSVariable = { fg = colors.gray, style = "italic" }
-    M.treesitter.TSVariableBuiltin = { fg = colors.gray, style = "italic" }
+    M.syntax.Identifier = { fg = colors.purple, bg = colors.none, style = "italic" }
+    M.treesitter.TSVariable = { fg = colors.white, style = "italic" }
+    M.treesitter.TSVariableBuiltin = { fg = colors.white, style = "italic" }
 end
 
 if vim.g.seoul256_borders == true then

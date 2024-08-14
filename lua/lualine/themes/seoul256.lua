@@ -15,7 +15,7 @@ M.insert = {
 }
 
 M.visual = {
-    a = { fg = colors.bg, bg = colors.purple, gui = "bold" },
+    a = { fg = colors.bg, bg = colors.light_red, gui = "bold" },
     b = { fg = colors.title, bg = colors.bg_l },
 }
 
@@ -25,7 +25,7 @@ M.replace = {
 }
 
 M.command = {
-    a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
+    a = { fg = colors.bg, bg = colors.brown, gui = "bold" },
     b = { fg = colors.title, bg = colors.bg_l },
 }
 
