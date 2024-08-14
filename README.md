@@ -1,12 +1,10 @@
-# shaunsingh/seoul256.nvim
-
-## Based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim
+# 🎨 seoul256.nvim
 
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
 
-## Features
+## ✨ Features
 
-seoul256.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+seoul256.nvim is meant to be a modern low-contrast colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 - Supported plugins:
@@ -29,6 +27,7 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
   - [Lualine](https://github.com/hoob3rt/lualine.nvim)
   - [Neogit](https://github.com/TimUntersberger/neogit)
   - [vim-sneak](https://github.com/justinmk/vim-sneak)
+  - [Noise.nvim](https://github.com/folke/noice.nvim)
 
 - Ability to change background on sidebar-like windows like Nvim-Tree, Packer, terminal etc.
 
@@ -38,21 +37,26 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 
 - Neovim >= 0.5.0
 
-## Installation
+## 📦 Installation
 
 Install via your favourite package manager:
 
+```lua
+-- If you are using lazy.nvim
+{"bincat233/seoul256.nvim"}
+```
+
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/seoul256.nvim'
+Plug 'bincat233/seoul256.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/seoul256.nvim'
+use 'bincat233/seoul256.nvim'
 ```
 
-## Usage
+## 🚀 Usage
 
 Enable the colorscheme:
 
@@ -92,7 +96,7 @@ require('lualine').setup {
 | seoul256_contrast           | `true`  | Make sidebars and popup menus like nvim-tree and telescope have a different background  |
 | seoul256_borders            | `false` | Enable the border between verticaly split windows visable                               |
 | seoul256_disable_background | `false` | Disable the setting of background color so that NeoVim can use your terminal background |
-| seoul256_hl_current_line    | `false` | Enable highlighting for the current line                                                |
+| seoul256_hl_current_line    | `true`  | Enable highlighting for the current line                                                |
 
 ```lua
 -- Example config in lua
@@ -123,3 +127,21 @@ let g:seoul256_hl_current_line = v:true
 -- Load the colorsheme
 colorscheme seoul256
 ```
+
+## 🗺️ Roadmap
+
+Since I can't find a job and have nothing else to do now and I really really like this theme, I will actively maintain this branch.
+
+- [ ] Support light theme
+- [ ] Dynamically generate accent colors that just simply darker or lighter
+- [ ] Find a way to change options in running
+- [ ] Add option to adjust contrast
+- [ ] Add option to adjust base brightness
+- [ ] Port the 256 color mode from the original vim theme
+
+Also, I will continue to add plug-in support. If anyone has any ideas, please feel free to report issues.
+
+## 🙏 Thanks
+
+This fork is based on [the work of shaunsingh](https://github.com/shaunsingh/seoul256.nvim)
+ which is also based off of the [seoul256 Theme](https://github.com/junegunn/seoul256.vim) for Vim , thanks to them for bringing this beautiful theme to NeoVim.
