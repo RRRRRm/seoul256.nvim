@@ -137,6 +137,7 @@ Since I can't find a job and have nothing else to do now and I really really lik
 - [ ] Find a way to change options in running
 - [ ] Add option to adjust contrast
 - [ ] Add option to adjust base brightness
+- [ ] Port the 256 color mode from the original vim theme
 
 Also, I will continue to add plug-in support. If anyone has any ideas, please feel free to report issues.
 
