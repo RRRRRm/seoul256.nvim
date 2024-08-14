@@ -123,3 +123,12 @@ let g:seoul256_hl_current_line = v:true
 -- Load the colorsheme
 colorscheme seoul256
 ```
+
+# Roadmap
+
+Since I can't find a job and have nothing else to do now, I will actively maintain this branch.
+
+- [ ]Support light theme
+- [ ]Dynamically generate accent colors that simply become darker or lighter
+- [ ]Add option to adjust contrast
+- [ ]Add option to adjust base brightness
