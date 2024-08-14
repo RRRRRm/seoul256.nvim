@@ -43,17 +43,17 @@ Install via your favourite package manager:
 
 ```lua
 -- If you are using lazy.nvim
-{"RRRRRm/seoul256.nvim"}
+{"bincat233/seoul256.nvim"}
 ```
 
 ```vim
 " If you are using Vim-Plug
-Plug 'RRRRRm/seoul256.nvim'
+Plug 'bincat233/seoul256.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'RRRRRm/seoul256.nvim'
+use 'bincat233/seoul256.nvim'
 ```
 
 ## 🚀 Usage
