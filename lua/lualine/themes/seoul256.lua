@@ -1,4 +1,4 @@
-local colors = require("seoul256.colors")
+local colors = require("seoul256/colors")
 local ct = require("seoul256.colortools")
 
 local M = {}

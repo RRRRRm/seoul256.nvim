@@ -24,7 +24,6 @@ local colors = {
     orange = "#c78a69",
     none = "NONE",
 
-    text = "#565656",
     border = "#414863",
     accent = "#ce8f6b",
     contrast = "#d4d4d4",
@@ -38,10 +37,15 @@ local colors = {
     link = "#67a9aa",
 }
 
+if vim.o.background == "light" then
+    colors = require("seoul256.colors-light")
+end
+
+colors.text = ct.lighten(colors.gray, -8) --text = "#565656",
 colors.hint = ct.change_saturation_via_lab(colors.line_numbers, 5):to_hex()
 colors.bg_l = ct.lighten(colors.bg, 8)
 colors.bg_d = ct.lighten(colors.bg, -8)
-colors.selection = ct.mix_two_colors_via_lab(colors.highlight, colors.bg, 0.4):to_hex()
+colors.selection = ct.mix_two_colors_via_lab(colors.highlight, colors.bg, 0.5):to_hex()
 -- Optional colors
 
 -- Enable contrast sidebars, floating windows and popup menus

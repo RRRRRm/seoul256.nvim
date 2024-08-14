@@ -341,6 +341,9 @@ CONTRAST_FACTOR = vim.g.seoul256_contrast_factor or 1
 
 function M.lighten(hex, value)
     value = value or 1
+    if vim.o.background == "light" then
+        value = -value
+    end
     return M.change_brightness(hex, CONTRAST_FACTOR * value):to_hex()
 end
 
