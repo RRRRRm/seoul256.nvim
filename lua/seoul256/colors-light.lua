@@ -3,7 +3,7 @@ local M = {
     fg = "#4e4e4e",
 
     black = "#3a3a3a",
-    red = "#af5f5f",
+    red = "#875f5f",
     green = "#5f885f",
     brown = "#af8760",
     blue = "#5f87ae",
