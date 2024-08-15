@@ -132,7 +132,7 @@ colorscheme seoul256
 
 Since I can't find a job and have nothing else to do now and I really really like this theme, I will actively maintain this branch.
 
-- [ ] Support light theme
+- [X] Support light theme
 - [ ] Dynamically generate accent colors that just simply darker or lighter
 - [ ] Find a way to change options in running
 - [ ] Add option to adjust contrast
