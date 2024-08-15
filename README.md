@@ -2,6 +2,8 @@
 
 <img width="1260" alt="Screen Shot 2021-06-01 at 5 22 20 PM" src="https://user-images.githubusercontent.com/71196912/120392089-0073c180-c2fe-11eb-9614-d9d957dc1674.png">
 
+![image](https://github.com/user-attachments/assets/467e985b-5b46-4692-b85b-f208758550d5)
+
 ## ✨ Features
 
 seoul256.nvim is meant to be a modern low-contrast colorscheme written in lua for NeoVim that supports a lot of the new features
